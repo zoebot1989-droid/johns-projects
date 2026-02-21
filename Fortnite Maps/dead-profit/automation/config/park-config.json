@@ -1,0 +1,154 @@
+{
+  "parkName": "Dead Profit",
+  "description": "Abandoned amusement park — co-op horror tycoon",
+  "mapSize": "Large Island",
+  "maxPlayers": 16,
+  "units": "centimeters (100 = 1 meter)",
+
+  "zones": [
+    {
+      "id": "entrance",
+      "name": "Entrance",
+      "center": { "x": 0, "y": 0, "z": 0 },
+      "radius": 2000,
+      "yaw": 0,
+      "description": "Main gate with ticket booths, turnstiles, welcome sign. First area players see.",
+      "mood": "Eerie welcome — looks inviting from afar, unsettling up close",
+      "props": [
+        "entrance_arch", "ticket_booth x3", "turnstile x4", "welcome_sign",
+        "lamppost x6", "bench x4", "trash_can x4", "planter x4",
+        "neon_sign x2", "park_map_board x1", "security_booth x1"
+      ]
+    },
+    {
+      "id": "central_plaza",
+      "name": "Central Plaza",
+      "center": { "x": 4000, "y": 0, "z": 0 },
+      "radius": 3000,
+      "description": "Hub area. Fountain in center, paths radiate to all zones. Info kiosk, souvenir shops.",
+      "mood": "Grand but decayed — fountain dry, shops boarded up",
+      "props": [
+        "fountain x1", "info_kiosk x1", "souvenir_shop x3", "bench x8",
+        "lamppost x12", "trash_can x6", "tree x8", "bush x12",
+        "statue x2", "flower_bed x4", "park_banner x6"
+      ]
+    },
+    {
+      "id": "kiddie_zone",
+      "name": "Kiddie Zone",
+      "center": { "x": 7000, "y": 4000, "z": 0 },
+      "radius": 2500,
+      "description": "Small rides for kids. Carousel, bumper cars, ball pit. Extra creepy when abandoned.",
+      "mood": "Childlike innocence gone wrong — faded colors, broken toys",
+      "props": [
+        "carousel x1", "bumper_car x6", "ball_pit_fence x8",
+        "toy_horse x4", "kiddie_train x1", "sandbox x1",
+        "colorful_bench x6", "balloon_stand x2", "candy_stall x2"
+      ]
+    },
+    {
+      "id": "food_court",
+      "name": "Food Court",
+      "center": { "x": 8000, "y": 0, "z": 0 },
+      "radius": 2000,
+      "description": "Food stalls, tables, dumpsters. Rats and spoiled food aesthetic.",
+      "mood": "Nauseating decay — rotting food smells, buzzing flies",
+      "props": [
+        "food_stall x6", "table_with_umbrella x8", "chair x24",
+        "dumpster x3", "trash_overflow x4", "vending_machine x3",
+        "menu_board x6", "neon_sign x3", "grease_trap x2"
+      ]
+    },
+    {
+      "id": "rides_area",
+      "name": "Rides Area",
+      "center": { "x": 7000, "y": -4000, "z": 0 },
+      "radius": 3500,
+      "description": "Big rides — ferris wheel, roller coaster, drop tower. Most structurally dangerous zone.",
+      "mood": "Industrial decay — creaking metal, rust, unstable structures",
+      "props": [
+        "ferris_wheel_structure", "coaster_station", "coaster_track x20",
+        "drop_tower_structure", "ride_fence x40", "caution_sign x8",
+        "ride_operator_booth x3", "ride_queue_barrier x20",
+        "broken_ride_piece x10", "tool_cart x3"
+      ]
+    },
+    {
+      "id": "haunted_house",
+      "name": "Haunted House",
+      "center": { "x": 11000, "y": 0, "z": 0 },
+      "radius": 2000,
+      "description": "The original haunted attraction — now ACTUALLY haunted. Winding dark corridors.",
+      "mood": "Pure horror — pitch black, jump scares, claustrophobic",
+      "props": [
+        "haunted_facade", "dark_corridor_walls x20", "fake_skeleton x6",
+        "cobweb x15", "creepy_portrait x8", "rocking_chair x2",
+        "candelabra x4", "coffin x2", "spider_prop x10",
+        "mirror x4", "curtain x8", "trapdoor x3"
+      ]
+    },
+    {
+      "id": "water_rides",
+      "name": "Water Rides",
+      "center": { "x": 4000, "y": -5000, "z": 0 },
+      "radius": 2500,
+      "description": "Water slide, lazy river (drained), splash pad. Stagnant water, algae.",
+      "mood": "Swampy decay — green water, slippery surfaces, mold",
+      "props": [
+        "water_slide_structure", "lazy_river_wall x30", "splash_pad x1",
+        "pool_fence x20", "lifeguard_chair x2", "changing_room x2",
+        "pool_float x6", "water_pipe x8", "algae_patch x10"
+      ]
+    },
+    {
+      "id": "boss_arena",
+      "name": "Main Stage / Boss Arena",
+      "center": { "x": 9000, "y": 0, "z": 0 },
+      "radius": 2000,
+      "description": "Performance stage repurposed as boss fight arena. Seating, backstage area.",
+      "mood": "Dramatic showdown — spotlight, dramatic shadows",
+      "props": [
+        "stage_platform x1", "stage_curtain x2", "spotlight x6",
+        "speaker_stack x4", "audience_seating x40", "backstage_door x2",
+        "prop_trunk x4", "costume_rack x2", "pyrotechnic_device x4"
+      ]
+    },
+    {
+      "id": "tunnels",
+      "name": "Underground Tunnels",
+      "center": { "x": 5000, "y": 2000, "z": -500 },
+      "radius": 1000,
+      "description": "Maintenance tunnels under the park. Connects zones, hides secrets.",
+      "mood": "Claustrophobic industrial — pipes, steam, emergency lights",
+      "props": [
+        "tunnel_wall x40", "pipe x20", "steam_vent x8",
+        "emergency_light x12", "fuse_box x4", "maintenance_cart x2",
+        "tool_shelf x4", "warning_sign x6", "manhole_cover x5"
+      ]
+    },
+    {
+      "id": "perimeter",
+      "name": "Perimeter Fence",
+      "center": { "x": 5500, "y": -500, "z": 0 },
+      "radius": 8000,
+      "description": "Chain-link fence surrounding the park. Some sections broken/cut.",
+      "mood": "No escape — barbed wire, warning signs, overgrown",
+      "props": [
+        "chain_link_fence x100", "fence_post x50", "barbed_wire x30",
+        "warning_sign x10", "broken_fence_section x5", "gate_padlocked x2",
+        "security_camera x8", "overgrown_vine x20"
+      ]
+    }
+  ],
+
+  "paths": [
+    { "from": "entrance", "to": "central_plaza", "width": 600, "material": "concrete" },
+    { "from": "central_plaza", "to": "kiddie_zone", "width": 400, "material": "painted_concrete" },
+    { "from": "central_plaza", "to": "food_court", "width": 400, "material": "concrete" },
+    { "from": "central_plaza", "to": "rides_area", "width": 500, "material": "concrete" },
+    { "from": "central_plaza", "to": "haunted_house", "width": 300, "material": "cobblestone" },
+    { "from": "central_plaza", "to": "water_rides", "width": 400, "material": "tile" },
+    { "from": "food_court", "to": "boss_arena", "width": 500, "material": "concrete" },
+    { "from": "central_plaza", "to": "tunnels", "width": 200, "material": "metal_grate", "note": "hidden entrance" }
+  ]
+}

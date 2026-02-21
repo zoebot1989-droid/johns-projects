@@ -1,0 +1,170 @@
+{
+  "description": "Entity spawn configuration for Dead Profit horror tycoon",
+
+  "enemies": {
+    "types": [
+      {
+        "id": "park_mascot",
+        "name": "The Mascot",
+        "description": "Corrupted park mascot — wanders zones, chases on sight",
+        "tier": "common",
+        "health": 100,
+        "speed": "medium",
+        "behavior": "patrol_then_chase",
+        "spawnZones": ["central_plaza", "kiddie_zone", "food_court"],
+        "activeTime": "night_only",
+        "maxActive": 3
+      },
+      {
+        "id": "maintenance_worker",
+        "name": "The Mechanic",
+        "description": "Ghostly maintenance worker — found near rides, uses tools as weapons",
+        "tier": "common",
+        "health": 150,
+        "speed": "slow",
+        "behavior": "guard_area",
+        "spawnZones": ["rides_area", "tunnels"],
+        "activeTime": "always",
+        "maxActive": 4
+      },
+      {
+        "id": "food_court_horror",
+        "name": "The Chef",
+        "description": "Bloated chef entity — slow but tanky, poisons area",
+        "tier": "uncommon",
+        "health": 300,
+        "speed": "very_slow",
+        "behavior": "area_denial",
+        "spawnZones": ["food_court"],
+        "activeTime": "always",
+        "maxActive": 1
+      },
+      {
+        "id": "child_ghost",
+        "name": "Lost Child",
+        "description": "Small, fast, hard to see — lures players into traps",
+        "tier": "uncommon",
+        "health": 50,
+        "speed": "fast",
+        "behavior": "lure_and_trap",
+        "spawnZones": ["kiddie_zone", "haunted_house"],
+        "activeTime": "night_only",
+        "maxActive": 2
+      },
+      {
+        "id": "water_creature",
+        "name": "The Drowned",
+        "description": "Emerges from stagnant water — grabs and pulls",
+        "tier": "uncommon",
+        "health": 200,
+        "speed": "medium_in_water",
+        "behavior": "ambush",
+        "spawnZones": ["water_rides"],
+        "activeTime": "always",
+        "maxActive": 2
+      },
+      {
+        "id": "tunnel_crawler",
+        "name": "The Crawler",
+        "description": "Moves through tunnel vents — drops from ceiling",
+        "tier": "rare",
+        "health": 175,
+        "speed": "fast",
+        "behavior": "ambush_ceiling",
+        "spawnZones": ["tunnels"],
+        "activeTime": "always",
+        "maxActive": 3
+      },
+      {
+        "id": "ringmaster",
+        "name": "The Ringmaster",
+        "description": "BOSS — commands other entities, stage-based fight",
+        "tier": "boss",
+        "health": 2000,
+        "speed": "medium",
+        "behavior": "boss_phases",
+        "spawnZones": ["boss_arena"],
+        "activeTime": "triggered",
+        "maxActive": 1,
+        "phases": [
+          { "phase": 1, "healthPercent": "100-60", "behavior": "ranged_attacks", "adds": ["park_mascot x2"] },
+          { "phase": 2, "healthPercent": "60-30", "behavior": "melee_charge", "adds": ["maintenance_worker x2", "child_ghost x1"] },
+          { "phase": 3, "healthPercent": "30-0", "behavior": "enraged_all_attacks", "adds": ["tunnel_crawler x2"], "arena_changes": "lights_flicker_platforms_break" }
+        ]
+      }
+    ],
+
+    "spawnPoints": {
+      "central_plaza": [
+        { "position": { "x": 3500, "y": 1000, "z": 0 } },
+        { "position": { "x": 4500, "y": -1000, "z": 0 } },
+        { "position": { "x": 4000, "y": 1500, "z": 0 } }
+      ],
+      "kiddie_zone": [
+        { "position": { "x": 6500, "y": 4500, "z": 0 } },
+        { "position": { "x": 7500, "y": 3500, "z": 0 } }
+      ],
+      "food_court": [
+        { "position": { "x": 7800, "y": 500, "z": 0 } },
+        { "position": { "x": 8200, "y": -500, "z": 0 } }
+      ],
+      "rides_area": [
+        { "position": { "x": 6500, "y": -3500, "z": 0 } },
+        { "position": { "x": 7500, "y": -4500, "z": 0 } },
+        { "position": { "x": 7000, "y": -3000, "z": 0 } }
+      ],
+      "haunted_house": [
+        { "position": { "x": 10500, "y": 0, "z": 0 } },
+        { "position": { "x": 11500, "y": 500, "z": 0 } }
+      ],
+      "water_rides": [
+        { "position": { "x": 3800, "y": -5200, "z": -50 } },
+        { "position": { "x": 4200, "y": -4800, "z": -50 } }
+      ],
+      "tunnels": [
+        { "position": { "x": 4800, "y": 2000, "z": -500 } },
+        { "position": { "x": 5200, "y": 2200, "z": -500 } },
+        { "position": { "x": 5000, "y": 1800, "z": -500 } }
+      ],
+      "boss_arena": [
+        { "position": { "x": 9000, "y": 0, "z": 100 }, "note": "center stage" }
+      ]
+    },
+
+    "patrolPaths": {
+      "plaza_patrol": [
+        { "x": 3500, "y": 1000, "z": 0 },
+        { "x": 4000, "y": 1500, "z": 0 },
+        { "x": 4500, "y": 1000, "z": 0 },
+        { "x": 4500, "y": -1000, "z": 0 },
+        { "x": 4000, "y": -1500, "z": 0 },
+        { "x": 3500, "y": -1000, "z": 0 }
+      ],
+      "rides_patrol": [
+        { "x": 6000, "y": -4000, "z": 0 },
+        { "x": 7000, "y": -5000, "z": 0 },
+        { "x": 8000, "y": -4000, "z": 0 },
+        { "x": 7000, "y": -3000, "z": 0 }
+      ]
+    },
+
+    "difficultyScaling": {
+      "players_1_4": { "healthMultiplier": 0.75, "spawnRateMultiplier": 0.5, "maxEnemies": 6 },
+      "players_5_8": { "healthMultiplier": 1.0, "spawnRateMultiplier": 1.0, "maxEnemies": 10 },
+      "players_9_12": { "healthMultiplier": 1.25, "spawnRateMultiplier": 1.3, "maxEnemies": 14 },
+      "players_13_16": { "healthMultiplier": 1.5, "spawnRateMultiplier": 1.5, "maxEnemies": 18 }
+    }
+  },
+
+  "waveSystem": {
+    "timeBetweenWaves": 120,
+    "wavesPerNight": 5,
+    "waves": [
+      { "wave": 1, "enemies": ["park_mascot x2"], "delay": 0 },
+      { "wave": 2, "enemies": ["park_mascot x2", "maintenance_worker x1"], "delay": 120 },
+      { "wave": 3, "enemies": ["park_mascot x3", "maintenance_worker x2", "child_ghost x1"], "delay": 120 },
+      { "wave": 4, "enemies": ["park_mascot x2", "food_court_horror x1", "water_creature x1", "tunnel_crawler x2"], "delay": 120 },
+      { "wave": 5, "enemies": ["ALL_TYPES x2"], "delay": 120, "note": "Everything comes out" }
+    ]
+  }
+}

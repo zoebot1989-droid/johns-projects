@@ -1,0 +1,168 @@
+{
+  "description": "Per-zone atmosphere settings for Dead Profit",
+
+  "globalSettings": {
+    "dayNightCycleDuration": 600,
+    "nightFraction": 0.4,
+    "globalWindStrength": 0.3,
+    "globalAmbientSound": "distant_wind_creaking"
+  },
+
+  "zones": {
+    "entrance": {
+      "day": {
+        "fog": { "enabled": false },
+        "particles": { "type": "dust_motes", "density": "light" },
+        "sound": { "ambient": "birds_distant_traffic", "volume": 0.4 },
+        "lightColor": "#FFE4B5",
+        "lightIntensity": 0.8
+      },
+      "night": {
+        "fog": { "enabled": true, "density": 0.3, "color": "#1a1a2e" },
+        "particles": { "type": "fireflies", "density": "medium" },
+        "sound": { "ambient": "crickets_gate_creaking", "volume": 0.6 },
+        "lightColor": "#4a4a6a",
+        "lightIntensity": 0.3
+      }
+    },
+    "central_plaza": {
+      "day": {
+        "fog": { "enabled": false },
+        "particles": { "type": "leaves_falling", "density": "light" },
+        "sound": { "ambient": "wind_fountain_dripping", "volume": 0.5 },
+        "lightColor": "#FFF8DC",
+        "lightIntensity": 1.0
+      },
+      "night": {
+        "fog": { "enabled": true, "density": 0.4, "color": "#16213e" },
+        "particles": { "type": "dust_embers", "density": "medium" },
+        "sound": { "ambient": "metal_creaking_whispers", "volume": 0.7 },
+        "lightColor": "#2c3e50",
+        "lightIntensity": 0.2
+      }
+    },
+    "kiddie_zone": {
+      "day": {
+        "fog": { "enabled": false },
+        "particles": { "type": "dust_motes", "density": "light" },
+        "sound": { "ambient": "broken_music_box_wind", "volume": 0.4 },
+        "lightColor": "#FFB6C1",
+        "lightIntensity": 0.9
+      },
+      "night": {
+        "fog": { "enabled": true, "density": 0.5, "color": "#1a1a2e" },
+        "particles": { "type": "ghostly_orbs", "density": "medium" },
+        "sound": { "ambient": "distorted_lullaby_giggles", "volume": 0.8 },
+        "lightColor": "#4a0e4e",
+        "lightIntensity": 0.15
+      }
+    },
+    "food_court": {
+      "day": {
+        "fog": { "enabled": false },
+        "particles": { "type": "flies_buzzing", "density": "medium" },
+        "sound": { "ambient": "buzzing_flies_dripping", "volume": 0.5 },
+        "lightColor": "#FAFAD2",
+        "lightIntensity": 0.8
+      },
+      "night": {
+        "fog": { "enabled": true, "density": 0.3, "color": "#2d2d2d" },
+        "particles": { "type": "flies_rats_skittering", "density": "heavy" },
+        "sound": { "ambient": "scratching_squelching_dripping", "volume": 0.7 },
+        "lightColor": "#8B8000",
+        "lightIntensity": 0.2
+      }
+    },
+    "rides_area": {
+      "day": {
+        "fog": { "enabled": false },
+        "particles": { "type": "rust_flakes_sparks", "density": "light" },
+        "sound": { "ambient": "metal_groaning_wind_whistling", "volume": 0.6 },
+        "lightColor": "#D2B48C",
+        "lightIntensity": 0.9
+      },
+      "night": {
+        "fog": { "enabled": true, "density": 0.4, "color": "#1a1a1a" },
+        "particles": { "type": "sparks_embers", "density": "heavy" },
+        "sound": { "ambient": "metal_screaming_chains_rattling", "volume": 0.8 },
+        "lightColor": "#8B0000",
+        "lightIntensity": 0.25
+      }
+    },
+    "haunted_house": {
+      "day": {
+        "fog": { "enabled": true, "density": 0.4, "color": "#2d2d2d" },
+        "particles": { "type": "dust_cobweb_strands", "density": "medium" },
+        "sound": { "ambient": "creaking_floors_dripping_whispers", "volume": 0.7 },
+        "lightColor": "#483D8B",
+        "lightIntensity": 0.2
+      },
+      "night": {
+        "fog": { "enabled": true, "density": 0.8, "color": "#0a0a0a" },
+        "particles": { "type": "ghostly_mist_shadow_wisps", "density": "heavy" },
+        "sound": { "ambient": "screams_footsteps_breathing_doors_slamming", "volume": 0.9 },
+        "lightColor": "#1a0a2e",
+        "lightIntensity": 0.05
+      }
+    },
+    "water_rides": {
+      "day": {
+        "fog": { "enabled": true, "density": 0.2, "color": "#90EE90" },
+        "particles": { "type": "water_mist_bubbles", "density": "medium" },
+        "sound": { "ambient": "stagnant_water_dripping_frogs", "volume": 0.5 },
+        "lightColor": "#7FFFD4",
+        "lightIntensity": 0.7
+      },
+      "night": {
+        "fog": { "enabled": true, "density": 0.6, "color": "#0a2a1a" },
+        "particles": { "type": "swamp_mist_glowing_algae", "density": "heavy" },
+        "sound": { "ambient": "splashing_gurgling_creature_calls", "volume": 0.8 },
+        "lightColor": "#006400",
+        "lightIntensity": 0.15
+      }
+    },
+    "boss_arena": {
+      "day": {
+        "fog": { "enabled": false },
+        "particles": { "type": "dust_motes", "density": "light" },
+        "sound": { "ambient": "wind_empty_stage", "volume": 0.3 },
+        "lightColor": "#FFFFFF",
+        "lightIntensity": 0.5
+      },
+      "night": {
+        "fog": { "enabled": true, "density": 0.3, "color": "#1a0a2e" },
+        "particles": { "type": "stage_smoke", "density": "medium" },
+        "sound": { "ambient": "ominous_hum_distant_applause", "volume": 0.6 },
+        "lightColor": "#FF4500",
+        "lightIntensity": 0.4
+      },
+      "boss_active": {
+        "fog": { "enabled": true, "density": 0.6, "color": "#2a0a0a" },
+        "particles": { "type": "pyrotechnics_sparks_fire", "density": "heavy" },
+        "sound": { "ambient": "boss_music_crowd_screaming", "volume": 1.0 },
+        "lightColor": "#FF0000",
+        "lightIntensity": 1.0,
+        "spotlightColor": "#FFFFFF",
+        "spotlightIntensity": 2.0
+      }
+    },
+    "tunnels": {
+      "day": {
+        "fog": { "enabled": true, "density": 0.3, "color": "#2d2d2d" },
+        "particles": { "type": "steam_drips", "density": "medium" },
+        "sound": { "ambient": "pipes_humming_water_dripping_echoes", "volume": 0.6 },
+        "lightColor": "#FF6347",
+        "lightIntensity": 0.15
+      },
+      "night": {
+        "fog": { "enabled": true, "density": 0.5, "color": "#1a1a1a" },
+        "particles": { "type": "steam_sparks_drips", "density": "heavy" },
+        "sound": { "ambient": "clanging_pipes_screams_echoing_footsteps", "volume": 0.8 },
+        "lightColor": "#8B0000",
+        "lightIntensity": 0.1,
+        "emergencyLightFlash": true,
+        "flashInterval": 2.0
+      }
+    }
+  }
+}
